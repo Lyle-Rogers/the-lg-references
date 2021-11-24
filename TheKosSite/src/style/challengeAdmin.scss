@@ -1,0 +1,140 @@
+.challengeAdmin {
+  height: 100%;
+
+  .challenge-header {
+    margin: 10px;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      height: 30px;
+      width: 100px;
+    }
+  }
+
+  .challenge-body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    .challenge-item {
+      width: 100%;
+      max-width: 400px;
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      display: grid;
+      grid-template-rows: 1fr 25%;
+
+      .item-details {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+
+    .item-buttons {
+      button {
+        width: 50px;
+        height: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.edit-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  .input-container {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+
+    .edit-input {
+      height: 35px;
+      margin-bottom: 15px;
+    }
+
+    .switch-buttons {
+      button {
+        height: 25px;
+        width: 100px;
+      }
+
+      .Active {
+        background-color: greenyellow;
+      }
+    }
+  }
+}
+
+.edit-modal-footer {
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  button {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+.modal-delete {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .delete-text {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      height: 25px;
+    }
+
+    input {
+      height: 50px;
+    }
+  }
+
+  button {
+    height: 50px;
+  }
+}
+
+.modal-create {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  .input-container {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    height: 35px;
+    margin: 5px 0 5px 0;
+  }
+
+  .input-container.summary {
+    height: 140px;
+  }
+}
+
+.modal-create-footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  button {
+    height: 50px;
+    width: 200px;
+  }
+}

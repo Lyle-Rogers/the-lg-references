@@ -1,0 +1,136 @@
+.challengesToDo,
+.challengesDone {
+  width: 100%;
+  max-width: 400px;
+  // height: 500px;
+  border-top: 1px solid black;
+  padding: 5px;
+
+  @include desktop {
+    // height: 800px;
+    max-width: 600px;
+  }
+
+  .header {
+    // height: 10%;
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .challenge {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: $charcoal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 70%;
+    }
+
+    .challenge-title,
+    .challenge-value {
+      margin: auto;
+      font-size: 20px;
+      font-weight: 600;
+      color: $off-white;
+    }
+  }
+
+  .submission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &:hover {
+      opacity: unset;
+    }
+  }
+}
+
+.challenge-form {
+  height: 100%;
+}
+
+.challenges-modal-body {
+  height: 70%;
+  padding: 20px;
+
+  overflow: auto;
+
+  .challenge-summary {
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .switch-input {
+    margin: auto;
+    margin-top: 30px;
+    width: fit-content;
+
+    .time-inputs,
+    .amount-input {
+      width: 300px;
+    }
+
+    .time-inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .time-input {
+        display: grid;
+        grid-template-rows: 80% 20%;
+
+        input {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          text-align: center;
+
+          @include desktop {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        label {
+          padding-top: 5px;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+
+    .amount-input {
+      height: 75px;
+
+      display: grid;
+      justify-content: center;
+
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 1em;
+
+        margin: auto;
+
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.challenges-modal-footer {
+  height: 10%;
+
+  button {
+    height: 100%;
+    width: 50%;
+  }
+}

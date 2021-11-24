@@ -1,0 +1,144 @@
+.homepage-container {
+  min-height: calc(100vh - 40px);
+
+  background-color: #121212;
+  color: white;
+
+  padding-bottom: 30px;
+
+  .logo-wrapper {
+    width: 100%;
+
+    text-align: center;
+
+    justify-content: center;
+
+    @include desktop {
+      font-size: 1.5em;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      filter: drop-shadow(0 0 0.75rem red);
+
+      @include desktop {
+        width: 30%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .box-rising {
+    background-color: #dcdcdc;
+    color: black;
+
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+
+    .wrapper {
+      -webkit-transform: skewY(5deg);
+      -moz-transform: skewY(5deg);
+      -ms-transform: skewY(5deg);
+      -o-transform: skewY(5deg);
+      transform: skewY(5deg);
+    }
+  }
+
+  .box-falling {
+    background-color: black;
+    color: white;
+
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -o-transform: skewY(5deg);
+    transform: skewY(5deg);
+
+    .wrapper {
+      -webkit-transform: skewY(-5deg);
+      -moz-transform: skewY(-5deg);
+      -ms-transform: skewY(-5deg);
+      -o-transform: skewY(-5deg);
+      transform: skewY(-5deg);
+    }
+  }
+
+  @include desktop {
+    .box-rising {
+      background-color: #dcdcdc;
+      color: black;
+
+      -webkit-transform: skewY(-2.5deg);
+      -moz-transform: skewY(-2.5deg);
+      -ms-transform: skewY(-2.5deg);
+      -o-transform: skewY(-2.5deg);
+      transform: skewY(-2.5deg);
+
+      .wrapper {
+        -webkit-transform: skewY(2.5deg);
+        -moz-transform: skewY(2.5deg);
+        -ms-transform: skewY(2.5deg);
+        -o-transform: skewY(2.5deg);
+        transform: skewY(2.5deg);
+      }
+    }
+  }
+
+  .box-falling {
+    background-color: black;
+    color: white;
+
+    -webkit-transform: skewY(2.5deg);
+    -moz-transform: skewY(2.5deg);
+    -ms-transform: skewY(2.5deg);
+    -o-transform: skewY(2.5deg);
+    transform: skewY(2.5deg);
+
+    .wrapper {
+      -webkit-transform: skewY(-2.5deg);
+      -moz-transform: skewY(-2.5deg);
+      -ms-transform: skewY(-2.5deg);
+      -o-transform: skewY(-2.5deg);
+      transform: skewY(-2.5deg);
+    }
+  }
+
+  .box-rising,
+  .box-falling {
+    margin: 17.5px 0;
+    padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+
+    @include desktop {
+      margin: 0;
+    }
+
+    .wrapper {
+      @include desktop {
+        margin: 10px 20vw;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      p,
+      li {
+        padding: 5px 0;
+        margin: 3px;
+        font-size: 1.2em;
+
+        text-align: justify;
+        list-style-position: inside;
+      }
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
