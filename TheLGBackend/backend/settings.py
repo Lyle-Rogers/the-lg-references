@@ -21,8 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hdr8l_!f4(!bj^vpk98$%o9=ea^0)73gn4%2f_w9mv)@(huc+&'
-STRIPE_SECRET_KEY = 'sk_test_51GrtUoHuoQnP408hRCNMQHsnv6xGhKddTNKoSlpC3apsOarcLs23GnYmrqregvBNVaU7bU1SJuw8BRuFhRuX4f1U001f9qGXda'
+SECRET_KEY = ''
+STRIPE_SECRET_KEY = ''
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -169,12 +169,12 @@ USE_S3 = True
 
 if USE_S3:
     # aws settings
-    AWS_ACCESS_KEY_ID = 'AKIA6B2AX23522YLGEHS'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'lebarongaleana-media'
+    AWS_ACCESS_KEY_ID = ''
+    AWS_SECRET_ACCESS_KEY = ''
+    AWS_STORAGE_BUCKET_NAME = ''
     AWS_DEFAULT_ACL = 'public-read'
-    AWS_S3_CUSTOM_DOMAIN = '%s.s3-us-west-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    AWS_S3_CUSTOM_DOMAIN = '' % AWS_STORAGE_BUCKET_NAME
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': ''}
 else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     MEDIA_URL = '/media/'
@@ -195,7 +195,7 @@ STATIC_ROOT = 'static'
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
